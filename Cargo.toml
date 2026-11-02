@@ -1,0 +1,9 @@
+[package]
+name = "phantomlinear"
+version = "0.1.0"
+edition = "2024"
+description = "Explicit-consumption guidance and runtime linearity checks"
+license = "MIT"
+publish = false
+
+[dependencies]
