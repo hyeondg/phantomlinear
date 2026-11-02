@@ -9,7 +9,7 @@ struct Transaction {
 impl Transaction {
     fn begin() -> Self {
         Self {
-            marker: PhantomLinear::named("transaction"),
+            marker: PhantomLinear::new(),
             pending: vec![],
         }
     }
@@ -18,7 +18,7 @@ impl Transaction {
     }
     fn commit(self) -> Vec<String> {
         let Self { marker, pending } = self;
-        marker.complete();
+        // marker.complete();
         pending
     }
     fn rollback(self) {
